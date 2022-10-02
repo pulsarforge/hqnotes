@@ -5,7 +5,8 @@
 .obsidian/cache
 .obsidian/workspace
 public
-
+workers-site
+wrangler.toml
 # Icon must end with two \r
 Icon
 

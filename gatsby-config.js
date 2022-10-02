@@ -1,14 +1,13 @@
 const path = require("path");
 const pathPrefix = "/";
-// Change me
 const siteMetadata = {
-  title: "Foam Template for Gatsby Theme Primer Wiki",
-  shortName: "Wiki",
+  title: "Guide to Software Engineering",
+  shortName: "Code",
   description:
-    "Another Foam template that use gatsby-theme-primer-wiki, Welcome to your new Foam Knowledge Base!",
-  twitterName: "theowenyoung",
-  imageUrl: "/graph-visualisation.jpg",
-  siteUrl: "https://demo-foam.owenyoung.com",
+    "Software Engineering Notes, Second Brain",
+  twitterName: "pulsarforge",
+  imageUrl: "/logo.png",
+  siteUrl: "https://hqnotes.pulsarforge.io",
 };
 module.exports = {
   siteMetadata,
@@ -18,34 +17,32 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "md",
+        path: `./md`,
+      },
+    },
+    {
       resolve: "gatsby-theme-primer-wiki",
       // Change me
       options: {
         icon: "./static/logo.png",
-        sidebarComponents: ["latest", "tag"],
+        sidebarComponents: ["summary", "tag"],
         nav: [
           {
             title: "Github",
-            url: "https://github.com/theowenyoung/foam-template-gatsby-theme-primer-wiki/",
+            url: "https://github.com/pulsarforge",
           },
           {
             title: "Twitter",
-            url: "https://twitter.com/theowenyoung",
+            url: "https://twitter.com/pulsarforge",
           },
         ],
         editUrl:
-          "https://github.com/theowenyoung/foam-template-gatsby-theme-primer-wiki/tree/main/",
+          "https://github.com/pulsarforge/hqnotes/",
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "content",
-        path: `${__dirname}/..`,
-        ignore: [`**/\.*/**/*`],
-      },
-    },
-
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -69,10 +66,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: `gatsby-plugin-plausible`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [],
+        domain: 'hqnotes.pulsarforge.io',
       },
     },
   ],
