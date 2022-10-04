@@ -28,7 +28,7 @@ module.exports = {
       // Change me
       options: {
         icon: "./static/logo.png",
-        sidebarComponents: ["summary", "tag"],
+        sidebarComponents: ["summary", "latest", "tag"],
         nav: [
           {
             title: "Github",
@@ -37,6 +37,10 @@ module.exports = {
           {
             title: "Twitter",
             url: "https://twitter.com/pulsarforge",
+          },
+          {
+            title: "Latest",
+            url: "/latest/",
           },
         ],
         editUrl:
