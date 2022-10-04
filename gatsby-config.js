@@ -44,7 +44,7 @@ module.exports = {
           },
         ],
         editUrl:
-          "https://github.com/pulsarforge/hqnotes/",
+          "https://github.com/pulsarforge/hqnotes/blob/main/md/",
       },
     },
     {
