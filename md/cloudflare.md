@@ -9,7 +9,7 @@ tags:
     - Deployments
 latest: 10-01
 ---
-# This page is deployed from: Cloudflare, Workers, Edge, Deployments.
+# This page is deployed from: Cloudflare, Workers, Edge.
 
 
 Install npm module and make it globally available
